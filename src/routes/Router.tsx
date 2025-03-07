@@ -6,7 +6,8 @@ import { rautes } from './routes'
 import AboutPage from '../components/pages/AboutPage'
 import ContactPage from '../components/pages/ContactPage'
 import LoginPage from '../components/pages/LoginPage'
-import MainPage from '../components/pages/MainPage'
+import Register from '../components/pages/Register'
+import ProtectRoute from './ProtectRoute'
 
 const Router:React.FC = () => {
   return (
@@ -14,14 +15,15 @@ const Router:React.FC = () => {
     <Routes>
         <Route path='/' element={<MuiNavbar routes={rautes}/>}>
         <Route index element={<HomePage/>} />
-        <Route path='/about' element={<AboutPage/>} />
-        <Route path='/contect' element={<ContactPage/>} />            
-       
+        <Route path='about' element={<AboutPage/>} />
        
         </Route>
-         
          <Route path='/login' element={<LoginPage/>} />
-        <Route path='/main' element={<MainPage/>} />  
+        <Route path='/register' element={<Register/>} />  
+
+           <Route element={<ProtectRoute/>}/>
+           <Route path="/contact" element={<ContactPage />} />
+     
     </Routes>
    
     </>

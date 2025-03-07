@@ -5,5 +5,4 @@ const ContactPage :React.FC = () => {
     <div>ContactPage</div>
   )
 }
-
 export default ContactPage;

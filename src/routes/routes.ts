@@ -6,6 +6,7 @@ export interface IRoute{
 
 export const rautes = [
     {path:'/', label:'Home'},
-    {path:'/login', label:'About'},
-    {path:'/main', label:'Contact'}
+    {path:'/about', label:'About'},
+    {path:'/contact', label:'Contact'},
+
 ]
